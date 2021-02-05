@@ -43,7 +43,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../saddist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/dashboard/',
+    assetsPublicPath: '/',
 
     /**
      * Source Maps
