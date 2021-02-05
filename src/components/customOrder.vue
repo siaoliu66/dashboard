@@ -286,7 +286,7 @@ export default {
             vm.isLoading = true
             this.$http.post(url,{data:code}).then((response) => {
                 console.log(response.data);
-                if(response.data){
+                if(response.data.success){
                     vm.isLoading = false
                     vm.conpon_code=''
                     vm.getcartproduct()
@@ -295,7 +295,6 @@ export default {
                     vm.conpon_code=''
                     this.$bus.$emit('message:push',response.data.message,'warning');
                 }
-                // this.$bus.$emit('message:push',response.data.message,'warning');
             });
         },
         createOrder(){
